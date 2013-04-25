@@ -4,8 +4,8 @@
  
 int main ()
 {
-
-    int pinNumber = 14;
+    int i = 0;
+    int pinNumber = 1;
     if (-1 == wiringPiSetup()) 
     {
         printf("Setup wiringPi failed!");
@@ -13,14 +13,14 @@ int main ()
     }
  
     pinMode(pinNumber, OUTPUT); // set mode to output 
-    for(int i=0; i<10; i++)
+    for(i=0; i<10; i++)
     {
         digitalWrite(pinNumber, 1); // output a high level 
         delay(800);
         digitalWrite(pinNumber, 0); // output a low level 
         delay(800);
     }
- 
+    printf("over!!"); 
     // hello, just test
     return 0;
 }
